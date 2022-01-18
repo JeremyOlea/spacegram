@@ -11,6 +11,7 @@ Web page hosted on github pages: https://jeremyolea.github.io/spacegram/
 :white_check_mark: Each image result has **title**, **date**, and **like button**.  
 :white_check_mark: Each image can be "liked" and "unliked".  
 :white_check_mark: Served client-side and is accessible and semantic.  
+![google lighthouse report](https://github.com/JeremyOlea/spacegram/blob/main/public/google-lighthouse-report.PNG)
 
 ### Additional Features
 - Photos contain description field.
