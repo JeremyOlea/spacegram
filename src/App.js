@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback, useEffect } from 'react'
 import ImageCard from './components/ImageCard';
 import useGetImages from './hooks/useGetImages';
 
@@ -25,6 +25,10 @@ function App() {
         })
         if (node) observer.current.observe(node);
     }, [loading]);
+
+    useEffect(() => {
+        document.title = 'Spacegram';
+    }, []);
 
     return (
         <div className='app'>
