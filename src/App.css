@@ -1,12 +1,35 @@
-.App-header {
-  /* background-color: #282c34; */
+.app-body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-body {
   background-color: #fafafa;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   color: black;
-  padding-top: 50px;
+  padding-top: 70px;
   padding-bottom: 50px;
+  width: 100%;
+}
+
+.app-header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.288);
+}
+
+.logo-text {
+  font-family: 'Courier New', monospace;
+  font-size: x-large
 }

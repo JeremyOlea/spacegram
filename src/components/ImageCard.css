@@ -15,9 +15,33 @@
 
 .custom-card-text {
     min-height: 60px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 15px;
+}
+
+.card-buttons {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.288); */
+}
+
+.unliked-button:hover {
+    cursor: pointer;
+    color: #0000006c
+}
+
+.liked-button {
+    cursor: pointer;
+    color: red;
+}
+
+.card-date-field {
+    padding-left: 15px;
+    padding-bottom: 10px;
+    font-size: smaller;
+    color: rgb(75, 75, 75);
 }

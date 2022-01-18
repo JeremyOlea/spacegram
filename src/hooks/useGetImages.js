@@ -9,12 +9,15 @@ export default function useGetImages(pageNumber) {
     const [data, setData] = useState([]);
 
     const preprocessData = (data) => {
+        if (data.length === 0) {
+            return
+        }
         let processedData = []
         data.slice().reverse()
             .forEach(function(item) {
                 if (item.media_type === 'image') {
                     processedData.push({
-                    date: item.date,
+                    date: DateUtils.convertToStringDate(item.date),
                     desc: item.explanation,
                     title: item.title,
                     url: item.url
@@ -24,6 +27,7 @@ export default function useGetImages(pageNumber) {
         return processedData;
     }
 
+    // Call API when page number changes
     useEffect(() => {
         setLoading(true);
         setError(false);

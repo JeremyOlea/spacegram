@@ -12,6 +12,8 @@ function App() {
         data
     } = useGetImages(pageNumber);
 
+    // Observe when the last entry is on the screen and change page number
+    // to load more posts
     const observer = useRef();
     const lastImageRef = useCallback((node) => {
         if (loading) return;
@@ -25,23 +27,30 @@ function App() {
     }, [loading]);
 
     return (
-        <header className="App-header">
-            {data.map((d, idx) => {
-                if (data.length === idx + 1) {
-                    return (
-                        <div key={idx} ref={lastImageRef}>
-                            <ImageCard key={idx} title={d.title} desc={d.desc}
-                                url={d.url}></ImageCard>
-                        </div>
-                        );
-                } else {
-                    return <ImageCard key={idx} title={d.title} desc={d.desc}
-                        url={d.url}></ImageCard>
-                }
-            })}
-            {loading && <div>Loading...</div>}
-            {error && <div>Error</div>}
-        </header>
+        <div className='app'>
+            <div className='app-header'>
+                <div className='logo-text'>
+                    Spacegram
+                </div>
+            </div>
+            <div className="app-body">
+                {data.map((d, idx) => {
+                    if (data.length === idx + 1) {
+                        return (
+                            <div key={idx} ref={lastImageRef}>
+                                <ImageCard key={idx} title={d.title} desc={d.desc}
+                                    url={d.url} date={d.date}></ImageCard>
+                            </div>
+                            );
+                    } else {
+                        return <ImageCard key={idx} title={d.title} desc={d.desc}
+                            url={d.url} date={d.date}></ImageCard>
+                    }
+                })}
+                {loading && <div>Loading...</div>}
+                {error && <div>Error</div>}
+            </div>
+        </div>
   );
 }
 
