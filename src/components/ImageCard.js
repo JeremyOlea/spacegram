@@ -16,7 +16,7 @@ export default function ImageCard({ title,  desc, url, date }) { // TODO: Add da
             <Card.Title className='custom-card-title'>
                 {title}
             </Card.Title>
-            <Card.Img  src={url}/>
+            <Card.Img  src={url} alt={title}/>
             <div className='card-buttons'>
                 {!liked ? <BsSuitHeart className='unliked-button' size={22}
                     onClick={() => likePost()}></BsSuitHeart> 
