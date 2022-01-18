@@ -16,7 +16,7 @@ Web page hosted on github pages: https://jeremyolea.github.io/spacegram/
 - Photos contain description field.
 - Like button is styled to be heart icon and changes color to show state of being clicked.
 - Added loading text while waiting for NASA API request.
-- Infinite scrolling: loads 5 photos at a time and reaching the bottom of the page load another 5 photos.
+- Infinite scrolling: loads 5 photos at a time and reaching the bottom of the page loads another 5 photos.
 
 ## Running Project Locally
 ### Requirements
